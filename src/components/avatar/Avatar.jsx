@@ -1,13 +1,12 @@
-import styles from './Avatar.module.css';
+import styles from "./Avatar.module.css";
 
+export function Avatar({hasBorder = true, src}) {
+  const hasBorderClass = hasBorder ? styles.avatarWithBorder : "";
 
-export function Avatar({hasBorder= true, src}){
-
-    const hasBorderClass = hasBorder ? styles.avatarWithBorder : '';
-
-    return(
-        <img src={src} 
-        className={hasBorder ? styles.avatarWithBorder: styles.avatar} />
-
-    )
+  return (
+    <img
+      src={src}
+      className={hasBorder ? styles.avatarWithBorder : styles.avatar}
+    />
+  );
 }
